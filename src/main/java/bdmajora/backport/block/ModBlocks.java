@@ -3,6 +3,7 @@ package bdmajora.backport.block;
 import bdmajora.backport.UtilIdRegistrar;
 import bdmajora.backport.backport;
 import bdmajora.backport.block.Door.*;
+import bdmajora.backport.block.TrapDoor.*;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.sound.BlockSounds;
@@ -1643,7 +1644,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("copper_door_top.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new CopperDoor("copperDoorTop", UtilIdRegistrar.nextIdBlock(), Material.metal, true));
 
 	public static final Block copperDoorBottom = new BlockBuilder(backport.MOD_ID)
@@ -1652,7 +1653,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("copper_door_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new CopperDoor("copperDoorBottom", UtilIdRegistrar.nextIdBlock(), Material.metal, false));
 
 	public static final Block darkOakDoorTop = new BlockBuilder(backport.MOD_ID)
@@ -1679,7 +1680,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("exposed_copper_door_top.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new ExposedCopperDoor("exposedCopperDoorTop", UtilIdRegistrar.nextIdBlock(), Material.metal, true));
 
 	public static final Block exposedCopperDoorBottom = new BlockBuilder(backport.MOD_ID)
@@ -1688,7 +1689,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("exposed_copper_door_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new ExposedCopperDoor("exposedCopperDoorBottom", UtilIdRegistrar.nextIdBlock(), Material.metal, false));
 
 	public static final Block jungleDoorTop = new BlockBuilder(backport.MOD_ID)
@@ -1733,7 +1734,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("oxidized_copper_door_top.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new OxidizedCopperDoor("oxidizedCopperDoorTop", UtilIdRegistrar.nextIdBlock(), Material.metal, true));
 
 	public static final Block oxidizedCopperDoorBottom = new BlockBuilder(backport.MOD_ID)
@@ -1742,7 +1743,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("oxidized_copper_door_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new OxidizedCopperDoor("oxidizedCopperDoorBottom", UtilIdRegistrar.nextIdBlock(), Material.metal, false));
 
 	public static final Block spruceDoorTop = new BlockBuilder(backport.MOD_ID)
@@ -1769,7 +1770,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("weathered_copper_door_top.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new WeatheredCopperDoor("weatheredCopperDoorTop", UtilIdRegistrar.nextIdBlock(), Material.metal, true));
 
 	public static final Block weatheredCopperDoorBottom = new BlockBuilder(backport.MOD_ID)
@@ -1778,9 +1779,162 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("weathered_copper_door_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(7))
-		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new WeatheredCopperDoor("weatheredCopperDoorBottom", UtilIdRegistrar.nextIdBlock(), Material.metal, false));
 
+	public static final Block acaciaTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("acacia_trapdoor.png")
+		.setSideTextures("acacia_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new AcaciaTrapDoor("acaciaTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block bambooTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("bamboo_trapdoor.png")
+		.setSideTextures("bamboo_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BambooTrapDoor("bambooTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block cherryTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("cherry_trapdoor.png")
+		.setSideTextures("cherry_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new CherryTrapDoor("cherryTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block copperTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.METAL)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("copper_trapdoor.png")
+		.setSideTextures("copper_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new CopperTrapDoor("copperTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.metal));
+
+	public static final Block crimsonTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("crimson_trapdoor.png")
+		.setSideTextures("crimson_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new CrimsonTrapDoor("crimsonTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block darkOakTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("dark_oak_trapdoor.png")
+		.setSideTextures("dark_oak_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new DarkOakTrapDoor("darkOakTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block exposedCopperTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.METAL)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("exposed_copper_trapdoor.png")
+		.setSideTextures("exposed_copper_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new ExposedCopperTrapDoor("exposedCopperTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.metal));
+
+	public static final Block jungleTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("jungle_trapdoor.png")
+		.setSideTextures("jungle_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new JungleTrapDoor("jungleTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block mangroveTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("mangrove_trapdoor.png")
+		.setSideTextures("mangrove_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new MangroveTrapDoor("mangroveTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block oxidizedCopperTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.METAL)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("oxidized_copper_trapdoor.png")
+		.setSideTextures("oxidized_copper_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new OxidizedCopperTrapDoor("oxidizedCopperTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.metal));
+
+	public static final Block spruceTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("spruce_trapdoor.png")
+		.setSideTextures("spruce_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new SpruceTrapDoor("spruceTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block warpedTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("warped_trapdoor.png")
+		.setSideTextures("warped_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new WarpedTrapDoor("warpedTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block weatheredCopperTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.METAL)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("weathered_copper_trapdoor.png")
+		.setSideTextures("weathered_copper_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new WarpedTrapDoor("weatheredCopperTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.metal));
+
+	public static final Block birchTrapDoor = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(5.0f)
+		.setResistance(2000.0f)
+		.setTopBottomTexture("birch_trapdoor.png")
+		.setSideTextures("birch_trapdoor_side.png")
+		.setBlockModel(new BlockModelRenderBlocks(30))
+		.setVisualUpdateOnMetadata()
+		.addTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BirchTrapDoor("birchTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
 
 	public static void register() {
 	}

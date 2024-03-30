@@ -35,6 +35,12 @@ public class ModCraftingManager {
 			.create("crimsonDoor", new ItemStack(ModItems.crimsonDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.crimsonPlanks)
+			.setConsumeContainer(false)
+			.create("crimsonTrapDoor", new ItemStack(ModBlocks.crimsonTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("S")
 			.addInput('S', ModBlocks.warpedStem)
 			.setConsumeContainer(false)
@@ -45,6 +51,12 @@ public class ModCraftingManager {
 			.addInput('P', ModBlocks.warpedPlanks)
 			.setConsumeContainer(false)
 			.create("warpedDoor", new ItemStack(ModItems.wardpedDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.warpedPlanks)
+			.setConsumeContainer(false)
+			.create("warpedTrapDoor", new ItemStack(ModBlocks.warpedTrapDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
@@ -59,6 +71,12 @@ public class ModCraftingManager {
 			.create("birchDoor", new ItemStack(ModItems.birchDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.birchPlank)
+			.setConsumeContainer(false)
+			.create("birchTrapDoor", new ItemStack(ModBlocks.birchTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
 			.addInput('L', ModBlocks.acaciaLog)
 			.setConsumeContainer(false)
@@ -69,6 +87,12 @@ public class ModCraftingManager {
 			.addInput('P', ModBlocks.acaciaPlanks)
 			.setConsumeContainer(false)
 			.create("acaciaDoor", new ItemStack(ModItems.acaciaDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.acaciaPlanks)
+			.setConsumeContainer(false)
+			.create("acaciaTrapDoor", new ItemStack(ModBlocks.acaciaTrapDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
@@ -83,6 +107,12 @@ public class ModCraftingManager {
 			.create("darkOakDoor", new ItemStack(ModItems.darkOakDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.darkOakPlanks)
+			.setConsumeContainer(false)
+			.create("darkOakTrapDoor", new ItemStack(ModBlocks.darkOakTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
 			.addInput('L', ModBlocks.jungleLog)
 			.setConsumeContainer(false)
@@ -93,6 +123,12 @@ public class ModCraftingManager {
 			.addInput('P', ModBlocks.junglePlanks)
 			.setConsumeContainer(false)
 			.create("jungleDoor", new ItemStack(ModItems.jungleDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.junglePlanks)
+			.setConsumeContainer(false)
+			.create("jungleTrapDoor", new ItemStack(ModBlocks.jungleTrapDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
@@ -107,6 +143,12 @@ public class ModCraftingManager {
 			.create("mangroveDoor", new ItemStack(ModItems.mangroveDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.mangrovePlanks)
+			.setConsumeContainer(false)
+			.create("mangroveTrapDoor", new ItemStack(ModBlocks.mangroveTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("L")
 			.addInput('L', ModBlocks.spruceLog)
 			.setConsumeContainer(false)
@@ -119,16 +161,34 @@ public class ModCraftingManager {
 			.create("spruceDoor", new ItemStack(ModItems.spruceDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.sprucePlanks)
+			.setConsumeContainer(false)
+			.create("spruceTrapDoor", new ItemStack(ModBlocks.spruceTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("PP", "PP", "PP")
 			.addInput('P', ModBlocks.cherryPlanks)
 			.setConsumeContainer(false)
 			.create("cherryDoor", new ItemStack(ModItems.cherryDoor, 3));
 
 		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.cherryPlanks)
+			.setConsumeContainer(false)
+			.create("cherryTrapDoor", new ItemStack(ModBlocks.cherryTrapDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
 			.setShape("PP", "PP", "PP")
 			.addInput('P', ModBlocks.bambooPlanks)
 			.setConsumeContainer(false)
 			.create("bambooDoor", new ItemStack(ModItems.bambooDoor, 3));
+
+		RecipeBuilder.Shaped(backport.MOD_ID)
+			.setShape("PPP", "PPP")
+			.addInput('P', ModBlocks.bambooPlanks)
+			.setConsumeContainer(false)
+			.create("bambooTrapDoor", new ItemStack(ModBlocks.bambooTrapDoor, 3));
 
 	}
 }

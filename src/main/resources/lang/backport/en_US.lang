@@ -245,6 +245,22 @@ tile.backport.redConcrete.name=Red Concrete
 tile.backport.whiteConcrete.name=White Concrete
 tile.backport.yellowConcrete.name=Yellow Concrete
 
+###Trap Doors
+tile.backport.acaciaTrapDoor.name=Acacia TrapDoor
+tile.backport.bambooTrapDoor.name=Bamboo TrapDoor
+tile.backport.cherryTrapDoor.name=Cherry TrapDoor
+tile.backport.birchTrapDoor.name=Birch TrapDoor
+tile.backport.copperTrapDoor.name=Copper TrapDoor
+tile.backport.crimsonTrapDoor.name=Crimson TrapDoor
+tile.backport.darkOakTrapDoor.name=Dark Oak TrapDoor
+tile.backport.exposedCopperTrapDoor.name=Exposed Copper TrapDoor
+tile.backport.jungleTrapDoor.name=Jungle TrapDoor
+tile.backport.mangroveTrapDoor.name=Mangrove TrapDoor
+tile.backport.oxidizedCopperTrapDoor.name=Oxidized Copper TrapDoor
+tile.backport.spruceTrapDoor.name=Spruce TrapDoor
+tile.backport.warpedTrapDoor.name=Warped TrapDoor
+tile.backport.weatheredCopperTrapDoor.name=Weathered Copper TrapDoor
+
 ###Doors
 item.backport.item.crimsonDoor.name=Crimson Door
 item.backport.item.warpedDoor.name=Warped Door
