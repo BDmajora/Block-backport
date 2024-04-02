@@ -2183,6 +2183,118 @@ public class ModBlocks {
 		.setTags(BlockTags.MINEABLE_BY_AXE)
 		.build(new BlockFlower("witherRose", UtilIdRegistrar.nextIdBlock()));
 
+	public static final Block blackStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("black_stained_glass.png")
+		.build(new BlockColouredGlass("blackStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block blueStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("blue_stained_glass.png")
+		.build(new BlockColouredGlass("blueStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block brownStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("brown_stained_glass.png")
+		.build(new BlockColouredGlass("brownStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block cyanStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("cyan_stained_glass.png")
+		.build(new BlockColouredGlass("cyanStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block grayStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("gray_stained_glass.png")
+		.build(new BlockColouredGlass("grayStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block greenStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("green_stained_glass.png")
+		.build(new BlockColouredGlass("greenStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block lightBlueStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("light_blue_stained_glass.png")
+		.build(new BlockColouredGlass("lightBlueStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block lightGrayStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("light_gray_stained_glass.png")
+		.build(new BlockColouredGlass("lightGrayStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block limeStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("lime_stained_glass.png")
+		.build(new BlockColouredGlass("limeStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block magentaStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("magenta_stained_glass.png")
+		.build(new BlockColouredGlass("magentaStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block orangeStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("orange_stained_glass.png")
+		.build(new BlockColouredGlass("orangeStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block pinkStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("pink_stained_glass.png")
+		.build(new BlockColouredGlass("pinkStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block purpleStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("purple_stained_glass.png")
+		.build(new BlockColouredGlass("purpleStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block redStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("red_stained_glass.png")
+		.build(new BlockColouredGlass("redStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block tintedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("tinted_glass.png")
+		.build(new BlockColouredGlass("tintedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+	public static final Block yellowStainedGlass = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(0.3f)
+		.setResistance(1.5f)
+		.setTextures("yellow_stained_glass.png")
+		.build(new BlockColouredGlass("yellowStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
 	public static void register() {
 	}
 }

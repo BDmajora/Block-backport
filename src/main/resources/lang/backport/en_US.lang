@@ -295,6 +295,23 @@ tile.backport.redTulip.name=Red Tulip
 tile.backport.whiteTulip.name=White Tulip
 tile.backport.witherRose.name=Wither Rose
 
+###glass
+tile.backport.blackStainedGlass.name=Black Stained Glass
+tile.backport.blueStainedGlass.name=Blue Stained Glass
+tile.backport.brownStainedGlass.name=Brown Stained Glass
+tile.backport.cyanStainedGlass.name=Cyan Stained Glass
+tile.backport.grayStainedGlass.name=Gray Stained Glass
+tile.backport.greenStainedGlass.name=Green Stained Glass
+tile.backport.lightBlueStainedGlass.name=Light Blue Stained Glass
+tile.backport.lightGrayStainedGlass.name=Light Gray Stained Glass
+tile.backport.limeStainedGlass.name=Lime Stained Glass
+tile.backport.magentaStainedGlass.name=Magenta Stained Glass
+tile.backport.orangeStainedGlass.name=Orange Stained Glass
+tile.backport.pinkStainedGlass.name=Pink Stained Glass
+tile.backport.redStainedGlass.name=Red Stained Glass
+tile.backport.tintedGlass.name=Tinted Glass
+tile.backport.yellowStainedGlass.name=Yellow Stained Glass
+
 ###Doors
 item.backport.item.crimsonDoor.name=Crimson Door
 item.backport.item.warpedDoor.name=Warped Door
