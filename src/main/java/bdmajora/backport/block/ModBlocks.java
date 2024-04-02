@@ -5,7 +5,7 @@ import bdmajora.backport.backport;
 import bdmajora.backport.block.Door.*;
 import bdmajora.backport.block.TrapDoor.*;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
-import net.minecraft.core.item.Item;
+import net.minecraft.core.block.BlockFlower;
 import net.minecraft.core.sound.BlockSounds;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
@@ -1935,6 +1935,253 @@ public class ModBlocks {
 		.setVisualUpdateOnMetadata()
 		.addTags(BlockTags.MINEABLE_BY_AXE)
 		.build(new BirchTrapDoor("birchTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
+	public static final Block barrel = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("barrel_top.png")
+		.setBottomTexture("barrel_bottom.png")
+		.setSideTextures("barrel_side.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("barrel",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block beeNest = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("bee_nest_top.png")
+		.setBottomTexture("bee_nest_bottom.png")
+		.setNorthTexture("bee_nest_side.png")
+		.setEastTexture("bee_nest_side.png")
+		.setWestTexture("bee_nest_side.png")
+		.setSouthTexture("bee_nest_front.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("beeNest",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block beeNestHoney = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("bee_nest_top.png")
+		.setBottomTexture("bee_nest_bottom.png")
+		.setNorthTexture("bee_nest_side.png")
+		.setEastTexture("bee_nest_side.png")
+		.setWestTexture("bee_nest_side.png")
+		.setSouthTexture("bee_nest_front_honey.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("beeNestHoney",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block beeHive = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopBottomTexture("beehive_end.png")
+		.setNorthTexture("beehive_side.png")
+		.setEastTexture("beehive_side.png")
+		.setWestTexture("beehive_side.png")
+		.setSouthTexture("beehive_front.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("beeHive",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block beeHiveHoney = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopBottomTexture("beehive_end.png")
+		.setNorthTexture("beehive_side.png")
+		.setEastTexture("beehive_side.png")
+		.setWestTexture("beehive_side.png")
+		.setSouthTexture("beehive_front_honey.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("beeHiveHoney",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block crafter = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("crafter_top.png")
+		.setBottomTexture("crafter_bottom.png")
+		.setNorthTexture("crafter_north.png")
+		.setEastTexture("crafter_east.png")
+		.setWestTexture("crafter_west.png")
+		.setSouthTexture("crafter_south.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("crafter",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block crafterTriggered = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("crafter_top_triggered.png")
+		.setBottomTexture("crafter_bottom.png")
+		.setNorthTexture("crafter_north.png")
+		.setEastTexture("crafter_east_triggered.png")
+		.setWestTexture("crafter_west_triggered.png")
+		.setSouthTexture("crafter_south_triggered.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("crafterTriggered",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block crafterCrafting = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("crafter_top_crafting.png")
+		.setBottomTexture("crafter_bottom.png")
+		.setNorthTexture("crafter_north.png")
+		.setEastTexture("crafter_east_crafting.png")
+		.setWestTexture("crafter_west_crafting.png")
+		.setSouthTexture("crafter_south.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("crafterCrafting",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block honeyBlock = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("honey_block_top.png")
+		.setBottomTexture("honey_block_bottom.png")
+		.setSideTextures("honey_block_side.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("honeyBlock",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block honeyCombBlock = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTextures("honeycomb_block.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("honeyCombBlock",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block jigsaw = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.WOOD)
+		.setHardness(2.0f)
+		.setResistance(2.0f)
+		.setTopTexture("jigsaw_top.png")
+		.setBottomTexture("jigsaw_bottom.png")
+		.setNorthTexture("jigsaw_side.png")
+		.setEastTexture("jigsaw_side.png")
+		.setWestTexture("jigsaw_side.png")
+		.setSouthTexture("jigsaw_lock.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new Block("jigsaw",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block soulTorch = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.FIRE)
+		.setHardness(1.0f)
+		.setResistance(1.0f)
+		.setTextures("soul_torch.png")
+		.setLuminance(15)
+		.setBlockModel((new BlockModelRenderBlocks(2)))
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockSoulTorch("soulTorch",UtilIdRegistrar.nextIdBlock(),Material.wood));
+
+	public static final Block mossBlock = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setHardness(1.0f)
+		.setResistance(1.0f)
+		.setTextures("moss_block.png")
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new Block("mossBlock",UtilIdRegistrar.nextIdBlock(),Material.stone));
+
+	public static final Block prismarineBricks = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.STONE)
+		.setHardness(1.0f)
+		.setResistance(1.0f)
+		.setTextures("prismarine_bricks.png")
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.build(new Block("prismarineBricks",UtilIdRegistrar.nextIdBlock(),Material.stone));
+
+	public static final Block azureBluet = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("azure_bluet.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("azureBluet", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block cornflower = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("cornflower.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("cornflower", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block lilyOfTheValley = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("lily_of_the_valley.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("lilyOfTheValley", UtilIdRegistrar.nextIdBlock()));
+
+//	public static final Block lilac = new BlockBuilder(backport.MOD_ID)
+//		.setBlockSound(BlockSounds.GRASS)
+//		.setHardness(0.0f)
+//		.setResistance(0.5f)
+//		.setBlockModel(new BlockModelRenderBlocks(1))
+//		.setTopTexture("lilac_top.png")
+//		.setBottomTexture("lilac_bottom.png")
+//		.setTags(BlockTags.MINEABLE_BY_AXE)
+//		.build(new BlockFlower("lilac", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block orangeTulip = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("orange_tulip.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("orangeTulip", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block oxeyeDaisy = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("oxeye_daisy.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("oxeyeDaisy", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block pinkTulip = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("pink_tulip.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("pinkTulip", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block redTulip = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("red_tulip.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("redTulip", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block whiteTulip = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("white_tulip.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("whiteTulip", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block witherRose = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("wither_rose.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockFlower("witherRose", UtilIdRegistrar.nextIdBlock()));
 
 	public static void register() {
 	}

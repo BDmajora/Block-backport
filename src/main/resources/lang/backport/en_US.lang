@@ -62,6 +62,7 @@ tile.backport.netherSprouts.name=Nether Sprouts
 tile.backport.soulSoil.name=Soul Soil
 tile.backport.ancientDebris.name=Ancient Debris
 tile.backport.magma.name=Magma
+tile.backport.soulTorch.name=Soul Torch
 
 ### emerald ore
 tile.backport.emeraldOre.name=Emerald Ore
@@ -84,12 +85,14 @@ tile.backport.mud.name=Mud
 tile.backport.mudBricks.name=Mud Bricks
 tile.backport.packedMud.name=Packed Mud
 tile.backport.granite.name=Granite
+tile.backport.barrel.name=Barrel
 
 ###caves and cliffs
 tile.backport.amethystBlock.name=Amethyst Block
 tile.backport.reinforcedDeepslate.name=Reinforced Deepslate
 tile.backport.basalt.name=Basalt
 tile.backport.smoothBasalt.name=Smooth Basalt
+tile.backport.mossBlock.name=Moss Block
 
 ###deepslate
 tile.backport.deepslate.name=Deepslate
@@ -260,6 +263,37 @@ tile.backport.oxidizedCopperTrapDoor.name=Oxidized Copper TrapDoor
 tile.backport.spruceTrapDoor.name=Spruce TrapDoor
 tile.backport.warpedTrapDoor.name=Warped TrapDoor
 tile.backport.weatheredCopperTrapDoor.name=Weathered Copper TrapDoor
+
+###bee's
+tile.backport.beeNest.name=Bee Nest
+tile.backport.beeNestHoney.name=Bee Nest Honey
+tile.backport.beeHive.name=Bee Hive
+tile.backport.beeHiveHoney.name=Bee Hive Honey
+tile.backport.honeyBlock.name=Honey Block
+tile.backport.honeyCombBlock.name=Honeycomb Block
+
+###craftor
+tile.backport.crafter.name=Crafter
+tile.backport.crafterTriggered.name=Crafter Triggered
+tile.backport.crafterCrafting.name=Crafter Crafting
+
+###weird blocks
+tile.backport.jigsaw.name=Jigsaw
+
+###aquatic
+tile.backport.prismarineBricks.name=Prismarine Bricks
+
+###flowers
+tile.backport.azureBluet.name=Azure Bluet
+tile.backport.cornflower.name=Cornflower
+tile.backport.lilyOfTheValley.name=Lily Of The Valley
+tile.backport.lilac.name=Lilac
+tile.backport.orangeTulip.name=Orange Tulip
+tile.backport.oxeyeDaisy.name=Oxeye Daisy
+tile.backport.pinkTulip.name=Pink Tulip
+tile.backport.redTulip.name=Red Tulip
+tile.backport.whiteTulip.name=White Tulip
+tile.backport.witherRose.name=Wither Rose
 
 ###Doors
 item.backport.item.crimsonDoor.name=Crimson Door
