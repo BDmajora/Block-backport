@@ -1,7 +1,7 @@
 package bdmajora.backport.mixin.entity;
 
-import bdmajora.backport.block.BlockSaplingCrimsonFungus;
-import bdmajora.backport.block.BlockSaplingWarpedFungus;
+import bdmajora.backport.block.Nether.BlockSaplingCrimsonFungus;
+import bdmajora.backport.block.Nether.BlockSaplingWarpedFungus;
 import bdmajora.backport.block.ModBlockTags;
 import bdmajora.backport.block.ModBlocks;
 import net.minecraft.core.block.Block;

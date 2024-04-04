@@ -63,6 +63,10 @@ tile.backport.soulSoil.name=Soul Soil
 tile.backport.ancientDebris.name=Ancient Debris
 tile.backport.magma.name=Magma
 tile.backport.soulTorch.name=Soul Torch
+tile.backport.weepingVinesPlant.name=Weeping Vines Plant
+tile.backport.weepingVines.name=Weeping Vines
+tile.backport.twistingVinesPlant.name=Twisting Vines Plant
+tile.backport.twistingVines.name=Twisting Vines
 
 ### emerald ore
 tile.backport.emeraldOre.name=Emerald Ore
@@ -86,6 +90,12 @@ tile.backport.mudBricks.name=Mud Bricks
 tile.backport.packedMud.name=Packed Mud
 tile.backport.granite.name=Granite
 tile.backport.barrel.name=Barrel
+tile.backport.vines.name=Vines
+tile.backport.caveVines.name=Cave Vines
+tile.backport.caveVinesPlant.name=Cave Vines Plant
+tile.backport.caveVinesLit.name=Cave Vines Lit
+tile.backport.caveVinesPlantLit.name=Cave Vines Plant Lit
+tile.backport.vine.name=Vines
 
 ###caves and cliffs
 tile.backport.amethystBlock.name=Amethyst Block
@@ -294,6 +304,9 @@ tile.backport.pinkTulip.name=Pink Tulip
 tile.backport.redTulip.name=Red Tulip
 tile.backport.whiteTulip.name=White Tulip
 tile.backport.witherRose.name=Wither Rose
+item.backport.item.lilac.name=Lilac
+item.backport.item.peony.name=Peony
+item.backport.item.roseBush.name=Rose Bush
 
 ###glass
 tile.backport.blackStainedGlass.name=Black Stained Glass
@@ -331,3 +344,7 @@ item.backport.item.weatheredCopperDoor.name=Weathered Copper Door
 ###items
 item.backport.record.Disc.name=Music Disc
 item.backport.item.brick.name=Nether Brick
+item.backport.item.vine.name=Vine
+
+###Food
+item.backport.item.glowBerries.name=Glow Berries

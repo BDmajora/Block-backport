@@ -1,4 +1,4 @@
-package bdmajora.backport.block;
+package bdmajora.backport.block.Nether;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;

@@ -3,7 +3,14 @@ package bdmajora.backport.block;
 import bdmajora.backport.UtilIdRegistrar;
 import bdmajora.backport.backport;
 import bdmajora.backport.block.Door.*;
+import bdmajora.backport.block.Flowers.Lilac;
+import bdmajora.backport.block.Flowers.Peony;
+import bdmajora.backport.block.Nether.*;
 import bdmajora.backport.block.TrapDoor.*;
+import bdmajora.backport.block.Vines.BlockCaveVinesLit;
+import bdmajora.backport.block.Vines.BlockVine;
+import bdmajora.backport.block.Vines.BlockVines;
+import bdmajora.backport.client.renderer.block.model.BlockModelNo3dRender;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.BlockFlower;
 import net.minecraft.core.sound.BlockSounds;
@@ -2294,6 +2301,150 @@ public class ModBlocks {
 		.setResistance(1.5f)
 		.setTextures("yellow_stained_glass.png")
 		.build(new BlockColouredGlass("yellowStainedGlass", UtilIdRegistrar.nextIdBlock(), Material.glass, false));
+
+//	public static final Block banner = new BlockBuilder(backport.MOD_ID)
+//		.setBlockSound(BlockSounds.WOOD)
+//		.setHardness(0.0f)
+//		.setResistance(0.5f)
+//		.setBlockModel(new BlockModelRenderBlocks(1))
+//		.setTextures("banner.png")
+//		.setTags(BlockTags.MINEABLE_BY_AXE)
+//		.build(new BlockBanner("banner", UtilIdRegistrar.nextIdBlock()));
+
+//	, BlockTags.NOT_IN_CREATIVE_MENU
+	public static final Block weepingVines = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("weeping_vines.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockWeepingVines("weepingVinesPlant", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block twistingVines = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("twisting_vines.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockTwistingVinesPlant("twistingVines", UtilIdRegistrar.nextIdBlock()));
+	public static final Block weepingVinesPlant = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("weeping_vines_plant.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockWeepingVinesPlant("weepingVinesPlant", UtilIdRegistrar.nextIdBlock()));
+	public static final Block twistingVinesPlant = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("twisting_vines_plant.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockTwistingVinesPlant("twistingVinesPlant", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block caveVines = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("cave_vines.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockVines("caveVines", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block caveVinesPlant = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("cave_vines_plant.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockVines("caveVinesPlant", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block caveVinesLit = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("cave_vines_lit.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.build(new BlockCaveVinesLit("caveVinesLit", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block caveVinesPlantLit = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.5f)
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.setTextures("cave_vines_plant_lit.png")
+		.setTags(BlockTags.MINEABLE_BY_AXE)
+		.setLuminance(15)
+		.build(new BlockCaveVinesLit("caveVinesPlantLit", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block vine = new BlockBuilder(backport.MOD_ID)
+		.setTextures("vine.png")
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.1f)
+		.setResistance(0.1f)
+		.setBlockModel(new BlockModelRenderBlocks(8))
+		.setTags(BlockTags.MINEABLE_BY_SHEARS,BlockTags.SHEARS_DO_SILK_TOUCH)
+		.build(new BlockVine("vine", UtilIdRegistrar.nextIdBlock()));
+
+	public static final Block lilacTop = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("lilac_top.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Lilac("lilacTop", UtilIdRegistrar.nextIdBlock(), Material.plant, true));
+
+	public static final Block lilacBottom = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("lilac_bottom.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Lilac("lilacBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
+
+	public static final Block peonyTop = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("peony_top.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Peony("peonyTop", UtilIdRegistrar.nextIdBlock(), Material.plant, true));
+
+	public static final Block peonyBottom = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("peony_bottom.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Lilac("peonyBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
+
+	public static final Block roseBushTop = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("rose_bush_top.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Peony("roseBushTop", UtilIdRegistrar.nextIdBlock(), Material.plant, true));
+
+	public static final Block roseBushBottom = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("rose_bush_bottom.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Lilac("roseBushBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
 
 	public static void register() {
 	}

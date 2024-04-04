@@ -8,6 +8,7 @@ import bdmajora.backport.world.biome.provider.BiomeProviderNether;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import turniplabs.halplibe.util.BlockCoords;
 import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
@@ -46,7 +47,7 @@ public class backport implements ModInitializer, GameStartEntrypoint, RecipeEntr
 
 	@Override
 	public void afterGameStart() {
-
+//		System.out.println("The length of the BlockCoords used textures array is: " + BlockCoords.usedCoordinates.length);
 	}
 
 	@Override

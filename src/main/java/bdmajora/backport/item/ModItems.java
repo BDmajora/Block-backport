@@ -1,8 +1,13 @@
 package bdmajora.backport.item;
 
 import bdmajora.backport.backport;
+import bdmajora.backport.block.ModBlocks;
+import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.item.Doors.*;
 import bdmajora.backport.UtilIdRegistrar;
+import bdmajora.backport.item.Flowers.ItemLilac;
+import bdmajora.backport.item.Flowers.ItemPeony;
+import bdmajora.backport.item.Flowers.ItemRoseBush;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemPlaceable;
 import turniplabs.halplibe.helper.ItemHelper;
@@ -46,6 +51,20 @@ public class ModItems {
 	public static final Item spruceDoor = ItemHelper.createItem(backport.MOD_ID, new ItemSpruceDoor("item.spruceDoor", UtilIdRegistrar.nextIdItem()), "spruce_door.png");
 
 	public static final Item weatheredCopperDoor = ItemHelper.createItem(backport.MOD_ID, new ItemWeatheredCopperDoor("item.weatheredCopperDoor", UtilIdRegistrar.nextIdItem()), "weathered_copper_door.png");
+
+	//food
+
+	public static final Item glowBerries = ItemHelper.createItem(backport.MOD_ID, new ItemFoodGlowBerries("item.glowBerries", UtilIdRegistrar.nextIdItem(), 4, false, 64), "glow_berries.png");
+
+	//plants
+
+	public static final Item vine = ItemHelper.createItem(backport.MOD_ID, new ItemBlockVine("item.vine", UtilIdRegistrar.nextIdBlock(), (BlockVine) ModBlocks.vine), "vine.png");
+
+	public static final Item lilac = ItemHelper.createItem(backport.MOD_ID, new ItemLilac("item.lilac", UtilIdRegistrar.nextIdItem()), "lilac_top.png");
+
+	public static final Item peony = ItemHelper.createItem(backport.MOD_ID, new ItemPeony("item.peony", UtilIdRegistrar.nextIdItem()), "peony_top.png");
+
+	public static final Item roseBush = ItemHelper.createItem(backport.MOD_ID, new ItemRoseBush("item.roseBush", UtilIdRegistrar.nextIdItem()), "rose_bush_top.png");
 
 	public static void register() {
 	}

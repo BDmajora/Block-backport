@@ -1,5 +1,6 @@
-package bdmajora.backport.block;
+package bdmajora.backport.block.Nether;
 
+import bdmajora.backport.block.ModBlocks;
 import bdmajora.backport.world.gen.WorldFeatureNetherFungi;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
@@ -10,8 +11,8 @@ import net.minecraft.core.world.generate.feature.WorldFeature;
 
 import java.util.Random;
 
-public class BlockSaplingCrimsonFungus extends Block {
-	public BlockSaplingCrimsonFungus(String key, int id, Material material) {
+public class BlockSaplingWarpedFungus extends Block {
+	public BlockSaplingWarpedFungus(String key, int id, Material material) {
 		super(key, id, material);
 	}
 
@@ -63,7 +64,7 @@ public class BlockSaplingCrimsonFungus extends Block {
 	}
 
 	public void grow(World world, int i, int j, int k, Random random) {
-		WorldFeatureNetherFungi treeSmall = new WorldFeatureNetherFungi(ModBlocks.netherWartBlock.id, ModBlocks.crimsonStem.id, true);
+		WorldFeatureNetherFungi treeSmall = new WorldFeatureNetherFungi(ModBlocks.warpedWartBlock.id, ModBlocks.warpedStem.id, true);
 		world.setBlock(i, j, k, 0);
 		if (!((WorldFeature) treeSmall).generate(world, random, i, j, k)) {
 			world.setBlock(i, j, k, this.id);

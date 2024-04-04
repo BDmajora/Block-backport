@@ -1,4 +1,4 @@
-package bdmajora.backport.block;
+package bdmajora.backport.block.Nether;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Global;
