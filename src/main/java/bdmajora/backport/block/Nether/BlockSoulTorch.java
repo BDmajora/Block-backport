@@ -5,7 +5,7 @@ import net.minecraft.core.Global;
 import net.minecraft.core.block.BlockTorch;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.world.World;
-//import bdmajora.backport.fx.EntityFireFx;
+import bdmajora.backport.fx.EntitySoulFireFx; // Import your soul fire particle class
 
 import java.util.Random;
 
@@ -24,15 +24,15 @@ public class BlockSoulTorch extends BlockTorch {
 			double d3 = 0.22;
 			double d4 = 0.27;
 			if (l == 1) {
-//				mc.effectRenderer.addEffect(new EntityFireFx(world, d - d4, d1 + d3, d2, 0.0, 0.0, 0.0));
+				mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d - d4, d1 + d3, d2, 0.0, 0.0, 0.0));
 			} else if (l == 2) {
-//				mc.effectRenderer.addEffect(new EntityFireFx(world, d + d4, d1 + d3, d2, 0.0, 0.0, 0.0));
+				mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d + d4, d1 + d3, d2, 0.0, 0.0, 0.0));
 			} else if (l == 3) {
-//				mc.effectRenderer.addEffect(new EntityFireFx(world, d, d1 + d3, d2 - d4, 0.0, 0.0, 0.0));
+				mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 - d4, 0.0, 0.0, 0.0));
 			} else if (l == 4) {
-//				mc.effectRenderer.addEffect(new EntityFireFx(world, d, d1 + d3, d2 + d4, 0.0, 0.0, 0.0));
+				mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 + d4, 0.0, 0.0, 0.0));
 			} else {
-//				mc.effectRenderer.addEffect(new EntityFireFx(world, d, d1, d2, 0.0, 0.0, 0.0));
+				mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1, d2, 0.0, 0.0, 0.0));
 			}
 		}
 	}
