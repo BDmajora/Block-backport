@@ -5,12 +5,12 @@ import bdmajora.backport.backport;
 import bdmajora.backport.block.Door.*;
 import bdmajora.backport.block.Flowers.Lilac;
 import bdmajora.backport.block.Flowers.Peony;
+import bdmajora.backport.block.Flowers.Sunflower;
 import bdmajora.backport.block.Nether.*;
 import bdmajora.backport.block.TrapDoor.*;
 import bdmajora.backport.block.Vines.BlockCaveVinesLit;
 import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
-import bdmajora.backport.client.renderer.block.model.BlockModelNo3dRender;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.BlockFlower;
 import net.minecraft.core.sound.BlockSounds;
@@ -2407,7 +2407,7 @@ public class ModBlocks {
 		.setResistance(0.0f)
 		.setTextures("lilac_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(1))
-		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new Lilac("lilacBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
 
 	public static final Block peonyTop = new BlockBuilder(backport.MOD_ID)
@@ -2425,7 +2425,7 @@ public class ModBlocks {
 		.setResistance(0.0f)
 		.setTextures("peony_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(1))
-		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new Lilac("peonyBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
 
 	public static final Block roseBushTop = new BlockBuilder(backport.MOD_ID)
@@ -2443,8 +2443,27 @@ public class ModBlocks {
 		.setResistance(0.0f)
 		.setTextures("rose_bush_bottom.png")
 		.setBlockModel(new BlockModelRenderBlocks(1))
-		.addTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new Lilac("roseBushBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
+
+	public static final Block sunflowerTop = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("sunflower_top.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Sunflower("sunflower", UtilIdRegistrar.nextIdBlock(), Material.plant, true));
+
+	public static final Block sunflowerBottom = new BlockBuilder(backport.MOD_ID)
+		.setBlockSound(BlockSounds.GRASS)
+		.setHardness(0.0f)
+		.setResistance(0.0f)
+		.setTextures("sunflower_bottom.png")
+		.setBlockModel(new BlockModelRenderBlocks(1))
+		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new Sunflower("sunflowerBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
+
 
 	public static void register() {
 	}

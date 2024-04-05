@@ -307,6 +307,7 @@ tile.backport.witherRose.name=Wither Rose
 item.backport.item.lilac.name=Lilac
 item.backport.item.peony.name=Peony
 item.backport.item.roseBush.name=Rose Bush
+item.backport.item.sunflower.name=Sunflower
 
 ###glass
 tile.backport.blackStainedGlass.name=Black Stained Glass

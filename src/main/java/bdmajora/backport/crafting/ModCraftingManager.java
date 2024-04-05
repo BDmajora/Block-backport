@@ -20,6 +20,7 @@ public class ModCraftingManager {
 	public static final RecipeNamespace BACKPORT = new RecipeNamespace();
 	public static final RecipeGroup<RecipeEntryCrafting<?, ?>> WORKBENCH = new RecipeGroup<>(new RecipeSymbol(new ItemStack(Block.workbench)));
 
+
 	public static void onRecipesReady() {
 
 		RecipeBuilder.Shaped(backport.MOD_ID)

@@ -8,9 +8,14 @@ import bdmajora.backport.UtilIdRegistrar;
 import bdmajora.backport.item.Flowers.ItemLilac;
 import bdmajora.backport.item.Flowers.ItemPeony;
 import bdmajora.backport.item.Flowers.ItemRoseBush;
+import bdmajora.backport.item.Flowers.ItemSunFlower;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemPlaceable;
 import turniplabs.halplibe.helper.ItemHelper;
+import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemFoodStackable;
+import net.minecraft.core.item.ItemPlaceable;
+import net.minecraft.core.item.ItemSeeds;
 
 public class ModItems {
 	// Items
@@ -65,6 +70,9 @@ public class ModItems {
 	public static final Item peony = ItemHelper.createItem(backport.MOD_ID, new ItemPeony("item.peony", UtilIdRegistrar.nextIdItem()), "peony_top.png");
 
 	public static final Item roseBush = ItemHelper.createItem(backport.MOD_ID, new ItemRoseBush("item.roseBush", UtilIdRegistrar.nextIdItem()), "rose_bush_top.png");
+
+	public static final Item sunflower = ItemHelper.createItem(backport.MOD_ID, new ItemSunFlower("item.sunflower", UtilIdRegistrar.nextIdItem()), "sunflower_top.png");
+
 
 	public static void register() {
 	}

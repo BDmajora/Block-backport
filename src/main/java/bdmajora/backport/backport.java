@@ -6,6 +6,8 @@ import bdmajora.backport.crafting.ModCraftingManager;
 import bdmajora.backport.item.ModItems;
 import bdmajora.backport.world.biome.provider.BiomeProviderNether;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.core.data.registry.Registries;
+import net.minecraft.core.data.registry.recipe.RecipeNamespace;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.util.BlockCoords;
@@ -53,5 +55,9 @@ public class backport implements ModInitializer, GameStartEntrypoint, RecipeEntr
 	@Override
 	public void onRecipesReady() {
 		ModCraftingManager.onRecipesReady();
+	}
+
+	public void initNamespaces() {
+		Registries.RECIPES.register(MOD_ID, new RecipeNamespace());
 	}
 }
