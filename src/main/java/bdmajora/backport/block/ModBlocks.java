@@ -11,13 +11,17 @@ import bdmajora.backport.block.TrapDoor.*;
 import bdmajora.backport.block.Vines.BlockCaveVinesLit;
 import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
+import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.BlockFlower;
+import net.minecraft.core.block.BlockStairs;
 import net.minecraft.core.sound.BlockSounds;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
 import turniplabs.halplibe.helper.BlockBuilder;
+import useless.dragonfly.helper.ModelHelper;
+import useless.dragonfly.model.block.BlockModelDragonFly;
 
 public class ModBlocks {
 
@@ -2464,6 +2468,119 @@ public class ModBlocks {
 		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new Sunflower("sunflowerBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
 
+	public static final Block testBlock = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock.json")))
+		.build(new useless.dfexample.block.BlockModel("testblock", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock.json")));
+
+	public static final Block testBlock2 = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock2.json")))
+		.build(new useless.dfexample.block.BlockModel("testblock2", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock2.json")));
+
+	public static final Block testBlock3 = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock3.json")))
+		.build(new useless.dfexample.block.BlockModel("testblock3", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock3.json")));
+
+	public static final Block modernDragonEgg = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/dragon_egg.json")))
+		.build(new useless.dfexample.block.BlockModel("exampleDragon", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/dragon_egg.json")));
+
+	public static final Block modernBeacon = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/beacon.json")))
+		.build(new useless.dfexample.block.BlockModel("exampleBeacon", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/beacon.json")));
+
+	public static final Block sideTest = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pyramid.json")))
+		.build(new useless.dfexample.block.BlockModel("testblock4", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pyramid.json")));
+
+	public static final Block btaStool = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/stool.json")))
+		.build(new useless.dfexample.block.BlockModel("exampleStool", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/stool.json")));
+
+	public static final Block cauldron = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/water_cauldron_full.json")))
+		.setBlockColor(new BlockColorWater())
+		.build(new useless.dfexample.block.BlockModel("exampleCauldron", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/water_cauldron_full.json")));
+
+	public static final Block stairs = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/stairs.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "test_stairs.json"), new useless.dfexample.block.metastates.StairsMetaStateInterpreter(), true))
+		.build(new BlockStairs(Block.dirt,UtilIdRegistrar.nextIdBlock())).withLitInteriorSurface(true);
+
+	public static final Block brewing = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/brewing/brewing_stand.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "brewing_stand.json"), new useless.dfexample.block.metastates.BrewingMetaState(), true))
+		.build(new useless.dfexample.block.BlockModel("exampleBrewingStand", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/brewing/brewing_stand.json")));
+
+	public static final Block fence = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/fence/birch_fence_inventory.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "test_fence.json"), new useless.dfexample.block.metastates.FenceMetaState(), true))
+		.build(new useless.dfexample.block.BlockModel("exampleFence", UtilIdRegistrar.nextIdBlock(), Material.dirt, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/fence/birch_fence_inventory.json"))).withTags(BlockTags.FENCES_CONNECT);
+
+	public static final Block bookshelf = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/bookshelf/chiseled_bookshelf_inventory.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "chiseled_bookshelf.json"), new useless.dfexample.block.metastates.BookshelfMetaState(), true))
+		.build(new useless.dfexample.block.BlockBookshelf("exampleBookshelf", UtilIdRegistrar.nextIdBlock(), Material.dirt));
+
+	public static final Block anvil = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/anvil.json")))
+		.build(new useless.dfexample.block.BlockModel("anvil", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/anvil.json")));
+
+	public static final Block lantern = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lantern.json")))
+		.setLuminance(15)
+		.build(new useless.dfexample.block.BlockModel("lantern", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lantern.json")));
+
+	public static final Block soulLantern = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/soul_lantern.json")))
+		.setLuminance(10)
+		.build(new useless.dfexample.block.BlockModel("soulLantern", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/soul_lantern.json")));
+
+	public static final Block lectern = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lectern.json")))
+		.setLuminance(10)
+		.build(new useless.dfexample.block.BlockModel("lectern", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lectern.json")));
+
+	public static final Block campfire = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/campfire.json")))
+		.setLuminance(15)
+		.build(new useless.dfexample.block.BlockModel("campfire", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/campfire.json")));
+
+	public static final Block soulfire = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/soul_campfire.json")))
+		.setLuminance(10)
+		.build(new useless.dfexample.block.BlockModel("soulfire", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/soul_campfire.json")));
+
+	public static final Block campfireoff = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/campfire_off.json")))
+		.setLuminance(10)
+		.build(new useless.dfexample.block.BlockModel("campfireoff", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/campfire_off.json")));
+
+	public static final Block endPortalFrameFilled = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_portal_frame_filled.json")))
+		.build(new useless.dfexample.block.BlockModel("endPortalFrameFilled", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_portal_frame_filled.json")));
+	public static final Block endPortalFrame= new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_portal_frame.json")))
+		.build(new useless.dfexample.block.BlockModel("endPortalFrame", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_portal_frame.json")));
+
+	public static final Block endRod = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_rod.json")))
+		.build(new useless.dfexample.block.BlockModel("endRod", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/end_rod.json")));
+
+	public static final Block sculkCatalyst = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_catalyst.json")))
+		.build(new useless.dfexample.block.BlockModel("sculkCatalyst", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_catalyst.json")));
+
+	public static final Block sculkSensor = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_sensor.json")))
+		.build(new useless.dfexample.block.BlockModel("sculkSensor", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_sensor.json")));
+
+	public static final Block sculkShrieker = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_shrieker.json")))
+		.build(new useless.dfexample.block.BlockModel("sculkShrieker", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_shrieker.json")));
+
+	public static final Block sculkVein = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_vein.json")))
+		.build(new useless.dfexample.block.BlockModel("sculkVein", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sculk_vein.json")));
 
 	public static void register() {
 	}

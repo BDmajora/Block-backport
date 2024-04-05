@@ -326,6 +326,38 @@ tile.backport.redStainedGlass.name=Red Stained Glass
 tile.backport.tintedGlass.name=Tinted Glass
 tile.backport.yellowStainedGlass.name=Yellow Stained Glass
 
+###test
+tile.backport.testblock.name=Test Block 1
+tile.backport.testblock2.name=Test Block 2
+tile.backport.testblock3.name=Test Block 3
+tile.backport.testblock4.name=Test Block 4
+tile.backport.stairs.dirt.name=Test Block 5
+
+###Dragonfly complex blocks
+tile.backport.exampleDragon.name=Dragon Egg
+tile.backport.exampleBeacon.name=Beacon
+tile.backport.exampleStool.name=Stool
+tile.backport.exampleCauldron.name=Cauldron
+tile.backport.exampleBrewingStand.name=Brewing Stand
+tile.backport.exampleFence.name=Birch Fence
+tile.backport.exampleBookshelf.name=Bookshelf
+
+###BDMajora Dragonflyblocks
+tile.backport.anvil.name=Anvil
+tile.backport.lantern.name=Lantern
+tile.backport.soulLantern.name=Soul Lantern
+tile.backport.lectern.name=Lectern
+tile.backport.campfire.name=Campfire
+tile.backport.soulfire.name=Soulfire
+tile.backport.campfireoff.name=Campfire off
+tile.backport.endPortalFrameFilled.name=End Portal Frame Filled
+tile.backport.endPortalFrame.name=End Portal Frame
+tile.backport.endRod.name=End Rod
+tile.backport.sculkCatalyst.name=Sculk Catalyst
+tile.backport.sculkSensor.name=Sculk Sensor
+tile.backport.sculkShrieker.name=Sculk Shrieker
+tile.backport.sculkVein.name=Sculk Vein
+
 ###Doors
 item.backport.item.crimsonDoor.name=Crimson Door
 item.backport.item.warpedDoor.name=Warped Door

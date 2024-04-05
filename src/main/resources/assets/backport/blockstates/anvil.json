@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "backport/anvil:block/anvil",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "backport/anvil:block/anvil",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "backport/anvil:block/anvil"
+    },
+    "facing=west": {
+      "model": "backport/anvil:block/anvil",
+      "y": 90
+    }
+  }
+}
