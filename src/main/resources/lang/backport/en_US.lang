@@ -357,6 +357,40 @@ tile.backport.sculkCatalyst.name=Sculk Catalyst
 tile.backport.sculkSensor.name=Sculk Sensor
 tile.backport.sculkShrieker.name=Sculk Shrieker
 tile.backport.sculkVein.name=Sculk Vein
+tile.backport.calibratedSculkSensor.name=Calibrated Sculk Sensor
+tile.backport.composter.name=Composter
+tile.backport.hopper.name=Hopper
+tile.backport.scaffolding.name=Scaffolding
+tile.backport.amethystCluster.name=Amethyst Cluster
+tile.backport.azalea.name=Azalea
+tile.backport.floweringAzalea.name=Flowering Azalea
+tile.backport.floweringAzalea.name=Flowering Azalea
+tile.backport.azaleaLeaves.name=Azalea Leaves
+tile.backport.floweringAzaleaLeaves.name=Flowering Azalea Leaves
+tile.backport.bigDripleaf.name=Big Drip leaf
+tile.backport.bigDripleaf.name=Big Drip leaf
+tile.backport.buddingAmethyst.name=Budding Amethyst
+
+###Shulker boxes
+tile.backport.blackShulkerBox.name=Black Shulker Box
+tile.backport.blueShulkerBox.name=Blue Shulker Box
+tile.backport.brownShulkerBox.name=Brown Shulker Box
+tile.backport.cyanShulkerBox.name=Cyan Shulker Box
+tile.backport.grayShulkerBox.name=Gray Shulker Box
+tile.backport.greenShulkerBox.name=Green Shulker Box
+tile.backport.lightBlueShulkerBox.name=Light Blue Shulker Box
+tile.backport.lightGrayShulkerBox.name=Light Gray Shulker Box
+tile.backport.limeShulkerBox.name=Lime Shulker Box
+tile.backport.magentaShulkerBox.name=Magenta Shulker Box
+tile.backport.orangeShulkerBox.name=Orange Shulker Box
+tile.backport.pinkShulkerBox.name=Pink Shulker Box
+tile.backport.purpleShulkerBox.name=Purple Shulker Box
+tile.backport.redShulkerBox.name=Red Shulker Box
+tile.backport.whiteShulkerBox.name=Shulker Box
+tile.backport.yellowShulkerBox.name=Yellow Shulker Box
+
+###Ice
+tile.backport.blueIce.name=Blue Ice
 
 ###Doors
 item.backport.item.crimsonDoor.name=Crimson Door
