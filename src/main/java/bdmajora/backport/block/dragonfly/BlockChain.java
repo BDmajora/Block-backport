@@ -27,11 +27,11 @@ public class BlockChain extends BlockTransparent {
 	public void onBlockPlaced(World world, int x, int y, int z, Side side, EntityLiving entity, double sideHeight) {
 		int meta = world.getBlockMetadata(x, y, z) & 0x11111100;
 		if (side == Side.NORTH || side == Side.SOUTH) {
-			meta |= 1; // axis=z
+			meta |= 2; // axis=z
 		} else if (side == Side.EAST || side == Side.WEST) {
-			meta |= 2; // axis=x
+			meta |= 0; // axis=x
 		} else {
-			meta |= 3; // axis=y
+			meta |= 1; // axis=y
 		}
 		world.setBlockMetadataWithNotify(x, y, z, meta);
 	}
