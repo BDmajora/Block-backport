@@ -12,11 +12,7 @@ public class ChainMetaState extends MetaStateInterpreter {
 	public HashMap<String, String> getStateMap(WorldSource worldSource, int x, int y, int z, Block block, int meta) {
 		HashMap<String, String> results = new HashMap<>();
 		Axis[] axies = new Axis[]{Axis.X, Axis.Y, Axis.Z, Axis.NONE};
-		results.put("axis", String.valueOf(axies[meta & 0b11]));
+		results.put("axis", String.valueOf(axies[meta & 0b11]).toLowerCase());
 		return results;
 	}
-
-
-
-
 }
