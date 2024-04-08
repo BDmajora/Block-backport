@@ -370,6 +370,31 @@ tile.backport.floweringAzaleaLeaves.name=Flowering Azalea Leaves
 tile.backport.bigDripleaf.name=Big Drip leaf
 tile.backport.bigDripleaf.name=Big Drip leaf
 tile.backport.buddingAmethyst.name=Budding Amethyst
+tile.backport.bell.name=Bell
+tile.backport.cartographyTable.name=Cartography Table
+tile.backport.chain.name=Chain
+
+###dragonfly carpet
+tile.backport.blackCarpet.name=Black Carpet
+tile.backport.blueCarpet.name=Blue Carpet
+tile.backport.brownCarpet.name=Brown Carpet
+tile.backport.cyanCarpet.name=Cyan Carpet
+tile.backport.grayCarpet.name=Gray Carpet
+tile.backport.greenCarpet.name=Green Carpet
+tile.backport.lightBlueCarpet.name=Light Blue Carpet
+tile.backport.lightGrayCarpet.name=Light Gray Carpet
+tile.backport.limeCarpet.name=Lime Carpet
+tile.backport.magentaCarpet.name=Magenta Carpet
+tile.backport.mossCarpet.name=Moss Carpet
+tile.backport.orangeCarpet.name=Orange Carpet
+tile.backport.pinkCarpet.name=Pink Carpet
+tile.backport.purpleCarpet.name=Purple Carpet
+tile.backport.redCarpet.name=Red Carpet
+tile.backport.whiteCarpet.name=White Carpet
+tile.backport.yellowCarpet.name=Yellow Carpet
+
+###dragonfly glass
+tile.backport.blackStainedGlassPane.name=Black Stained Glass Pane
 
 ###Shulker boxes
 tile.backport.blackShulkerBox.name=Black Shulker Box

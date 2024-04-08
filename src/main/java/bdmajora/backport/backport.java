@@ -4,6 +4,7 @@ import bdmajora.backport.biome.ModBiomes;
 import bdmajora.backport.block.ModBlocks;
 import bdmajora.backport.crafting.ModCraftingManager;
 import bdmajora.backport.item.ModItems;
+import bdmajora.backport.tile.BellTileEntity;
 import bdmajora.backport.world.biome.provider.BiomeProviderNether;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.data.registry.Registries;
@@ -45,6 +46,7 @@ public class backport implements ModInitializer, GameStartEntrypoint, RecipeEntr
 		ModItems.register();
 		ModBiomes.initializeBiomes();
 		BiomeProviderNether.init();
+
 	}
 
 	@Override

@@ -13,6 +13,8 @@ import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
 import bdmajora.backport.block.dragonfly.BlockBookshelf;
 import bdmajora.backport.block.dragonfly.BlockModel;
+import bdmajora.backport.tile.BellTileEntity;
+import bdmajora.backport.client.tesr.BellTileEntityRenderer;
 import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.BlockFlower;
@@ -2788,9 +2790,106 @@ public class ModBlocks {
 		.build(new Block("blueIce",UtilIdRegistrar.nextIdBlock(),Material.ice));
 
 	public static final Block bell = new BlockBuilder(backport.MOD_ID)
-		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/bell_floor.json"),
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "item/bell.json"),
 			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "bell.json"), new bdmajora.backport.block.metastates.BellMetaState(), true))
-		.build(new bdmajora.backport.block.dragonfly.BlockBell("bell", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/bell_floor.json")));
+		.build(new bdmajora.backport.block.dragonfly.BlockBell("bell", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "item/bell.json")));
+
+
+	public static final Block blackCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/black_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "black_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("blackCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/black_carpet.json")));
+
+	public static final Block blueCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/blue_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "blue_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("blueCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/blue_carpet.json")));
+
+	public static final Block brownCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/brown_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "brown_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("brownCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/brown_carpet.json")));
+
+	public static final Block cyanCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/cyan_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "cyan_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("cyanCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/cyan_carpet.json")));
+
+	public static final Block grayCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/gray_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "gray_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("grayCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/gray_carpet.json")));
+
+	public static final Block greenCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/green_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "green_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("greenCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/green_carpet.json")));
+
+	public static final Block lightBlueCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/light_blue_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "light_blue_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("lightBlueCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/light_blue_carpet.json")));
+
+	public static final Block lightGrayCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/light_gray_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "light_gray_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("lightGrayCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/light_gray_carpet.json")));
+
+	public static final Block limeCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lime_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "lime_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("limeCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/lime_carpet.json")));
+
+	public static final Block magentaCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/magenta_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "magenta_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("magentaCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/magenta_carpet.json")));
+
+	public static final Block mossCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/moss_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "moss_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("mossCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/moss_carpet.json")));
+
+	public static final Block orangeCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/orange_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "orange_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("orangeCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/orange_carpet.json")));
+
+	public static final Block pinkCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pink_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "pink_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("pinkCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pink_carpet.json")));
+
+	public static final Block purpleCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/purple_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "purple_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("purpleCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/purple_carpet.json")));
+
+	public static final Block redCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/red_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "red_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("redCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/red_carpet.json")));
+
+	public static final Block whiteCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/white_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "white_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("whiteCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/white_carpet.json")));
+
+	public static final Block yellowCarpet = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/yellow_carpet.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "yellow_carpet.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("yellowCarpet", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/yellow_carpet.json")));
+
+//	Stane glass does not seem possible even with dragonfly, I will wait for an update to see if it gets better, maybe it's an entity and that's why.
+//	public static final Block blackStainedGlassPane = new BlockBuilder(backport.MOD_ID)
+//		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pane/black_stained_glass_pane_side_alt.json"),
+//			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "black_stained_glass_pane.json"), null, true))
+//		.build(new bdmajora.backport.block.dragonfly.BlockModel("blackStainedGlassPane", UtilIdRegistrar.nextIdBlock(), Material.glass, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pane/black_stained_glass_pane_side_alt.json")));
+
+	public static final Block chain = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/chain.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "chain.json"), new bdmajora.backport.block.metastates.ChainMetaState(), true))
+		.build(new bdmajora.backport.block.dragonfly.BlockChain("chain", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/chain.json")));
 
 
 	public static void register() {
