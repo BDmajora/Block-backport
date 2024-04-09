@@ -2,7 +2,6 @@ package bdmajora.backport.block.Nether;
 
 import java.util.Random;
 
-import bdmajora.backport.fx.EntitySoulFireFx;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
@@ -160,30 +159,30 @@ public class BlockSoulTorch
 		return super.collisionRayTrace(world, x, y, z, start, end);
 	}
 
-	@Override
-	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
-		int l = world.getBlockMetadata(x, y, z);
-		double d = (float)x + 0.5f;
-		double d1 = (float)y + 0.7f;
-		double d2 = (float)z + 0.5f;
-		double d3 = 0.22;
-		double d4 = 0.27;
-		if (l == 1) {
-			world.spawnParticle("smoke", d - d4, d1 + d3, d2, 0.0, 0.0, 0.0);
-			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d - d4, d1 + d3, d2, 0.0, 0.0, 0.0));
-		} else if (l == 2) {
-			world.spawnParticle("smoke", d + d4, d1 + d3, d2, 0.0, 0.0, 0.0);
-			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d + d4, d1 + d3, d2,  0.0, 0.0, 0.0));
-		} else if (l == 3) {
-			world.spawnParticle("smoke", d, d1 + d3, d2 - d4, 0.0, 0.0, 0.0);
-			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 - d4,  0.0, 0.0, 0.0));
-		} else if (l == 4) {
-			world.spawnParticle("smoke", d, d1 + d3, d2 + d4, 0.0, 0.0, 0.0);
-			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 + d4,  0.0, 0.0, 0.0));
-		} else {
-			world.spawnParticle("smoke", d, d1, d2, 0.0, 0.0, 0.0);
-			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1, d2, 0.0, 0.0, 0.0));
-		}
-	}
+//	@Override
+//	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
+//		int l = world.getBlockMetadata(x, y, z);
+//		double d = (float)x + 0.5f;
+//		double d1 = (float)y + 0.7f;
+//		double d2 = (float)z + 0.5f;
+//		double d3 = 0.22;
+//		double d4 = 0.27;
+//		if (l == 1) {
+//			world.spawnParticle("smoke", d - d4, d1 + d3, d2, 0.0, 0.0, 0.0);
+//			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d - d4, d1 + d3, d2, 0.0, 0.0, 0.0));
+//		} else if (l == 2) {
+//			world.spawnParticle("smoke", d + d4, d1 + d3, d2, 0.0, 0.0, 0.0);
+//			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d + d4, d1 + d3, d2,  0.0, 0.0, 0.0));
+//		} else if (l == 3) {
+//			world.spawnParticle("smoke", d, d1 + d3, d2 - d4, 0.0, 0.0, 0.0);
+//			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 - d4,  0.0, 0.0, 0.0));
+//		} else if (l == 4) {
+//			world.spawnParticle("smoke", d, d1 + d3, d2 + d4, 0.0, 0.0, 0.0);
+//			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1 + d3, d2 + d4,  0.0, 0.0, 0.0));
+//		} else {
+//			world.spawnParticle("smoke", d, d1, d2, 0.0, 0.0, 0.0);
+//			mc.effectRenderer.addEffect(new EntitySoulFireFx(world, d, d1, d2, 0.0, 0.0, 0.0));
+//		}
+//	}
 }
 

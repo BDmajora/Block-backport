@@ -5,16 +5,26 @@ import bdmajora.backport.item.ModItems;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
+import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.helper.Direction;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
+import useless.dragonfly.model.block.processed.BlockCube;
+import useless.dragonfly.model.block.processed.BlockModel;
+import net.minecraft.core.util.phys.AABB;
+
+import java.util.ArrayList;
 
 public class Sunflower extends Block {
 
-	public Sunflower (String name, int id, Material material, boolean isTop) {
+	public BlockModel model;
+
+	public Sunflower(String name, int id, Material material, BlockModel model) {
 		super(name, id, material);
-		// Additional custom properties or logic can be added here
+		this.model = model;
 	}
 
 	@Override
@@ -51,5 +61,13 @@ public class Sunflower extends Block {
 			world.setBlockWithNotify(x, y - 1, z, 0); // Destroys the bottom half
 		}
 	}
-}
 
+	@Override
+	public void getCollidingBoundingBoxes(World world, int x, int y, int z, AABB aabb, ArrayList<AABB> aabbList) {
+		for (BlockCube cube: model.blockCubes) {
+			setBlockBounds(cube.xMin(), cube.yMin(), cube.zMin(), cube.xMax(), cube.yMax(), cube.zMax());
+			super.getCollidingBoundingBoxes(world, x, y, z, aabb, aabbList);
+		}
+		this.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+	}
+}

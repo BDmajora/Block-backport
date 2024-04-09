@@ -13,8 +13,8 @@ import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
 import bdmajora.backport.block.dragonfly.BlockBookshelf;
 import bdmajora.backport.block.dragonfly.BlockModel;
-import bdmajora.backport.tile.BellTileEntity;
-import bdmajora.backport.client.tesr.BellTileEntityRenderer;
+//import bdmajora.backport.tile.BellTileEntity;
+//import bdmajora.backport.client.tesr.BellTileEntityRenderer;
 import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.BlockFlower;
@@ -2456,22 +2456,18 @@ public class ModBlocks {
 		.build(new Lilac("roseBushBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
 
 	public static final Block sunflowerTop = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.GRASS)
-		.setHardness(0.0f)
-		.setResistance(0.0f)
-		.setTextures("sunflower_top.png")
-		.setBlockModel(new BlockModelRenderBlocks(1))
 		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new Sunflower("sunflower", UtilIdRegistrar.nextIdBlock(), Material.plant, true));
+		.setBlockDrop(null)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sunflower_top.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "sunflower.json"), null, true))
+		.build(new bdmajora.backport.block.Flowers.Sunflower("sunflowerTop", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sunflower_top.json")));
 
-	public static final Block sunflowerBottom = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.GRASS)
-		.setHardness(0.0f)
-		.setResistance(0.0f)
-		.setTextures("sunflower_bottom.png")
-		.setBlockModel(new BlockModelRenderBlocks(1))
+	public static final Block sunflowerBottom  = new BlockBuilder(backport.MOD_ID)
 		.addTags(BlockTags.MINEABLE_BY_AXE, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new Sunflower("sunflowerBottom", UtilIdRegistrar.nextIdBlock(), Material.plant, false));
+		.setBlockDrop(null)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sunflower_bottom.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "sunflower.json"), null, true))
+		.build(new bdmajora.backport.block.Flowers.Sunflower("sunflowerBottom ", UtilIdRegistrar.nextIdBlock(), Material.plant, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/sunflower_bottom.json")));
 
 	public static final Block testBlock = new BlockBuilder(backport.MOD_ID)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/testblock.json")))
@@ -2883,6 +2879,7 @@ public class ModBlocks {
 //	Stane glass does not seem possible even with dragonfly, I will wait for an update to see if it gets better, maybe it's an entity and that's why.
 //	public static final Block blackStainedGlassPane = new BlockBuilder(backport.MOD_ID)
 //		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pane/black_stained_glass_pane_side_alt.json"),
+//			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "black_stained_glass_pane.json"), null, true))
 //			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "black_stained_glass_pane.json"), null, true))
 //		.build(new bdmajora.backport.block.dragonfly.BlockModel("blackStainedGlassPane", UtilIdRegistrar.nextIdBlock(), Material.glass, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/pane/black_stained_glass_pane_side_alt.json")));
 

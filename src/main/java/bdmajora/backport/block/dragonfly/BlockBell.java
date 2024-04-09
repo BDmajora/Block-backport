@@ -12,7 +12,7 @@ import net.minecraft.core.world.World;
 import useless.dragonfly.model.block.processed.BlockCube;
 import useless.dragonfly.model.block.processed.BlockModel;
 import net.minecraft.core.util.phys.AABB;
-import bdmajora.backport.tile.BellTileEntity;
+//import bdmajora.backport.tile.BellTileEntity;
 
 import java.util.ArrayList;
 
@@ -69,7 +69,7 @@ public class BlockBell extends BlockTransparent {
 		this.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 	}
 
-	public TileEntity createNewTileEntity(World world, int meta) {
-		return new BellTileEntity();
-	}
+//	public TileEntity createNewTileEntity(World world, int meta) {
+//		return new BellTileEntity();
+//	}
 }
