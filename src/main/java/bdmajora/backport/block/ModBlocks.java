@@ -12,6 +12,7 @@ import bdmajora.backport.block.Vines.BlockCaveVinesLit;
 import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
 import bdmajora.backport.block.dragonfly.BlockBookshelf;
+import bdmajora.backport.block.dragonfly.BlockEnchantmentTable;
 import bdmajora.backport.block.dragonfly.BlockModel;
 //import bdmajora.backport.tile.BellTileEntity;
 //import bdmajora.backport.client.tesr.BellTileEntityRenderer;
@@ -2888,7 +2889,21 @@ public class ModBlocks {
 			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "chain.json"), new bdmajora.backport.block.metastates.ChainMetaState(), true))
 		.build(new bdmajora.backport.block.dragonfly.BlockChain("chain", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/chain.json")));
 
+	public static final Block enchantmentTable = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/enchanting_table.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "enchanting_table.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockEnchantmentTable("enchantmentTable", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/chain.json")));
 
+//	public static final Block enchantmentTable = new BlockBuilder(backport.MOD_ID)
+//		.setBlockSound(BlockSounds.STONE)
+//		.setHardness(5)
+//		.setResistance(1200)
+//		.setLuminance(7)
+//		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+//		.setBottomTexture("enchantment_table/bottom.png")
+//		.setSideTextures("enchantment_table/side.png")
+//		.setTopTexture("enchantment_table/top.png")
+//		.build(new BlockEnchantmentTable("enchantmentTable",UtilIdRegistrar.nextIdBlock(),Material.stone));
 	public static void register() {
 	}
 }

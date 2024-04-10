@@ -9,9 +9,22 @@
       "SurfaceGeneratorNetherMixin",
       "WorldTypeNetherMixin",
       "entity.EntityItemMixin",
-      "entity.ItemDyeMixin"
+      "entity.ItemDyeMixin",
+      "entity.EntityLivingMixin",
+      "entity.EntityBobberMixin",
+      "entity.EntityPlayerMixin",
+      "entity.EntityPlayerMixin",
+      "entity.EntityPlayerMPMixin",
+      "entity.EntityPlayerSPMixin",
+      "item.ItemStackMixin",
+      "item.ItemToolMixin",
+      "net.NetServerHandlerMixin",
+      "net.NetClientHandlerMixin"
     ],
     "client": [
+      "client.GuiTooltipMixin",
+      "client.PlayerControllerMixin",
+      "client.TileEntityRenderDispatcherAccessor"
     ],
     "injectors": {
         "defaultRequire": 1

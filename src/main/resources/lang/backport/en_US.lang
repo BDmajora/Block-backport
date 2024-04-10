@@ -414,6 +414,9 @@ tile.backport.redShulkerBox.name=Red Shulker Box
 tile.backport.whiteShulkerBox.name=Shulker Box
 tile.backport.yellowShulkerBox.name=Yellow Shulker Box
 
+###Gui blocks
+tile.backport.enchantmentTable.name=Enchantment Table
+
 ###Ice
 tile.backport.blueIce.name=Blue Ice
 
@@ -440,3 +443,11 @@ item.backport.item.vine.name=Vine
 
 ###Food
 item.backport.item.glowBerries.name=Glow Berries
+
+###enchantments
+enchantment.backport.haste.name = Haste
+enchantment.backport.unbreaking.name = Unbreaking
+enchantment.backport.quickswing.name = Quickswing
+enchantment.backport.flame.name = Flame
+enchantment.backport.bait.name = Bait
+

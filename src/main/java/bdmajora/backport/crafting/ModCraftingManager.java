@@ -191,6 +191,15 @@ public class ModCraftingManager {
 			.setConsumeContainer(false)
 			.create("bambooTrapDoor", new ItemStack(ModBlocks.bambooTrapDoor, 3));
 
+
+			RecipeBuilder.Shaped(backport.MOD_ID)
+				.setShape(" B ","DCD","CCC")
+				.addInput('B', Item.book)
+				.addInput('C', Block.obsidian)
+				.addInput('D', Item.diamond)
+				.create("enchantment_table", new ItemStack(ModBlocks.enchantmentTable, 1));
+
+
 	}
 }
 

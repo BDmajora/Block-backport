@@ -13,6 +13,7 @@ import net.minecraft.core.util.phys.AABB;
 import java.util.ArrayList;
 
 public class BlockLecturn extends BlockTransparent {
+
 	public useless.dragonfly.model.block.processed.BlockModel model;
 
 	public BlockLecturn(String key, int id, Material material, BlockModel model) {
