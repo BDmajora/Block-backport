@@ -16,14 +16,14 @@ import bdmajora.backport.block.dragonfly.BlockEnchantmentTable;
 import bdmajora.backport.block.dragonfly.BlockModel;
 //import bdmajora.backport.tile.BellTileEntity;
 //import bdmajora.backport.client.tesr.BellTileEntityRenderer;
+import bdmajora.backport.block.gui.BlockBarrel;
 import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
-import net.minecraft.core.block.BlockFlower;
-import net.minecraft.core.block.BlockStairs;
+import net.minecraft.core.block.*;
 import net.minecraft.core.sound.BlockSounds;
-import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.world.World;
 import turniplabs.halplibe.helper.BlockBuilder;
 import useless.dragonfly.helper.ModelHelper;
 import useless.dragonfly.model.block.BlockModelDragonFly;
@@ -334,7 +334,7 @@ public class ModBlocks {
 		.setTopBottomTexture("crimson_stem_top.png")
 		.setTopBottomTexture("crimson_stem_top.png")
 		.addTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("crimson_stem", UtilIdRegistrar.nextIdBlock(), MaterialAccess.nether_log));
+		.build(new BlockAxisAligned("crimson_stem", UtilIdRegistrar.nextIdBlock(), MaterialAccess.nether_log));
 	public static final Block warpedStem = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
 		.setHardness(2.0f)
@@ -343,7 +343,7 @@ public class ModBlocks {
 		.setSideTextures("warped_stem.png")
 		.setTopBottomTexture("warped_stem_top.png")
 		.addTags(BlockTags.FENCES_CONNECT, BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("warped_stem", UtilIdRegistrar.nextIdBlock(), MaterialAccess.nether_log));
+		.build(new BlockAxisAligned("warped_stem", UtilIdRegistrar.nextIdBlock(), MaterialAccess.nether_log));
 	public static final Block crimsonPlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
 		.setHardness(2.0f)
@@ -1460,7 +1460,7 @@ public class ModBlocks {
 		.setTopBottomTexture("acacia_log_top.png")
 		.setSideTextures("acacia_log.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("acaciaLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("acaciaLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block acaciaPlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1477,7 +1477,7 @@ public class ModBlocks {
 		.setTopBottomTexture("dark_oak_log_top.png")
 		.setSideTextures("dark_oak_log.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("darkOakLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("darkOakLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block darkOakPlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1494,7 +1494,7 @@ public class ModBlocks {
 		.setTopBottomTexture("jungle_log_top.png")
 		.setSideTextures("jungle_log.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("jungleLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("jungleLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block junglePlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1511,7 +1511,7 @@ public class ModBlocks {
 		.setTopBottomTexture("mangrove_log_top.png")
 		.setSideTextures("mangrove_log.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("mangroveLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("mangroveLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block mangrovePlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1528,7 +1528,7 @@ public class ModBlocks {
 		.setTopBottomTexture("spruce_log_top.png")
 		.setSideTextures("spruce_log.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("spruceLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("spruceLog",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block sprucePlanks = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1544,7 +1544,7 @@ public class ModBlocks {
 		.setResistance(2.0f)
 		.setTextures("cherry_planks.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("cherryPlanks",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockAxisAligned("cherryPlanks",UtilIdRegistrar.nextIdBlock(),Material.wood));
 
 	public static final Block crimsonDoorTop = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -1960,7 +1960,7 @@ public class ModBlocks {
 		.setBottomTexture("barrel_bottom.png")
 		.setSideTextures("barrel_side.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new Block("barrel",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockBarrel("barrel", UtilIdRegistrar.nextIdBlock(), Material.wood));
 
 	public static final Block beeNest = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
@@ -2134,16 +2134,6 @@ public class ModBlocks {
 		.setTextures("lily_of_the_valley.png")
 		.setTags(BlockTags.MINEABLE_BY_AXE)
 		.build(new BlockFlower("lilyOfTheValley", UtilIdRegistrar.nextIdBlock()));
-
-//	public static final Block lilac = new BlockBuilder(backport.MOD_ID)
-//		.setBlockSound(BlockSounds.GRASS)
-//		.setHardness(0.0f)
-//		.setResistance(0.5f)
-//		.setBlockModel(new BlockModelRenderBlocks(1))
-//		.setTopTexture("lilac_top.png")
-//		.setBottomTexture("lilac_bottom.png")
-//		.setTags(BlockTags.MINEABLE_BY_AXE)
-//		.build(new BlockFlower("lilac", UtilIdRegistrar.nextIdBlock()));
 
 	public static final Block orangeTulip = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.GRASS)

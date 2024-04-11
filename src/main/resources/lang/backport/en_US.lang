@@ -89,7 +89,6 @@ tile.backport.mud.name=Mud
 tile.backport.mudBricks.name=Mud Bricks
 tile.backport.packedMud.name=Packed Mud
 tile.backport.granite.name=Granite
-tile.backport.barrel.name=Barrel
 tile.backport.vines.name=Vines
 tile.backport.caveVines.name=Cave Vines
 tile.backport.caveVinesPlant.name=Cave Vines Plant
@@ -325,6 +324,7 @@ tile.backport.pinkStainedGlass.name=Pink Stained Glass
 tile.backport.redStainedGlass.name=Red Stained Glass
 tile.backport.tintedGlass.name=Tinted Glass
 tile.backport.yellowStainedGlass.name=Yellow Stained Glass
+tile.backport.purpleStainedGlass.name=Purple Stained Glass
 
 ###test
 tile.backport.testblock.name=Test Block 1
@@ -417,6 +417,8 @@ tile.backport.yellowShulkerBox.name=Yellow Shulker Box
 ###Gui blocks
 tile.backport.enchantmentTable.name=Enchantment Table
 tile.backport.smoker.name=Smoker
+tile.backport.barrel.name=Barrel
+
 ###Ice
 tile.backport.blueIce.name=Blue Ice
 
