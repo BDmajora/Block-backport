@@ -2090,7 +2090,7 @@ public class ModBlocks {
 		.setLuminance(15)
 		.setBlockModel((new BlockModelRenderBlocks(2)))
 		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new BlockSoulTorch("soulTorch",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.build(new BlockSoulTorch("soulTorch",UtilIdRegistrar.nextIdBlock()));
 
 	public static final Block mossBlock = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.STONE)
