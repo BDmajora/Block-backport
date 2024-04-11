@@ -193,9 +193,9 @@ public class ModCraftingManager {
 
 
 			RecipeBuilder.Shaped(backport.MOD_ID)
-				.setShape(" B ","DCD","CCC")
+				.setShape(" B ","DOD","OOO")
 				.addInput('B', Item.book)
-				.addInput('C', Block.obsidian)
+				.addInput('O', Block.obsidian)
 				.addInput('D', Item.diamond)
 				.create("enchantment_table", new ItemStack(ModBlocks.enchantmentTable, 1));
 

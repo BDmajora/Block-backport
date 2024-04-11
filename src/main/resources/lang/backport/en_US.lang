@@ -416,7 +416,7 @@ tile.backport.yellowShulkerBox.name=Yellow Shulker Box
 
 ###Gui blocks
 tile.backport.enchantmentTable.name=Enchantment Table
-
+tile.backport.smoker.name=Smoker
 ###Ice
 tile.backport.blueIce.name=Blue Ice
 

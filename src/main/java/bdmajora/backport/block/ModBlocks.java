@@ -2894,16 +2894,11 @@ public class ModBlocks {
 			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "enchanting_table.json"), null, true))
 		.build(new bdmajora.backport.block.dragonfly.BlockEnchantmentTable("enchantmentTable", UtilIdRegistrar.nextIdBlock(), Material.stone, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/chain.json")));
 
-//	public static final Block enchantmentTable = new BlockBuilder(backport.MOD_ID)
-//		.setBlockSound(BlockSounds.STONE)
-//		.setHardness(5)
-//		.setResistance(1200)
-//		.setLuminance(7)
-//		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-//		.setBottomTexture("enchantment_table/bottom.png")
-//		.setSideTextures("enchantment_table/side.png")
-//		.setTopTexture("enchantment_table/top.png")
-//		.build(new BlockEnchantmentTable("enchantmentTable",UtilIdRegistrar.nextIdBlock(),Material.stone));
+	public static final Block smoker = new BlockBuilder(backport.MOD_ID)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/smoker.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "smoker.json"), new bdmajora.backport.block.metastates.SmokerMetaState(), true))
+		.build(new bdmajora.backport.block.dragonfly.BlockSmoker("smoker", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/smoker.json")));
+
 	public static void register() {
 	}
 }
