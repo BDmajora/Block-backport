@@ -5,25 +5,20 @@ import bdmajora.backport.backport;
 import bdmajora.backport.block.Door.*;
 import bdmajora.backport.block.Flowers.Lilac;
 import bdmajora.backport.block.Flowers.Peony;
-import bdmajora.backport.block.Flowers.Sunflower;
 import bdmajora.backport.block.Nether.*;
 import bdmajora.backport.block.TrapDoor.*;
 import bdmajora.backport.block.Vines.BlockCaveVinesLit;
 import bdmajora.backport.block.Vines.BlockVine;
 import bdmajora.backport.block.Vines.BlockVines;
 import bdmajora.backport.block.dragonfly.BlockBookshelf;
-import bdmajora.backport.block.dragonfly.BlockEnchantmentTable;
-import bdmajora.backport.block.dragonfly.BlockModel;
 //import bdmajora.backport.tile.BellTileEntity;
 //import bdmajora.backport.client.tesr.BellTileEntityRenderer;
-import bdmajora.backport.block.gui.BlockBarrel;
 import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.*;
 import net.minecraft.core.sound.BlockSounds;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
-import net.minecraft.core.world.World;
 import turniplabs.halplibe.helper.BlockBuilder;
 import useless.dragonfly.helper.ModelHelper;
 import useless.dragonfly.model.block.BlockModelDragonFly;
@@ -1952,15 +1947,21 @@ public class ModBlocks {
 		.addTags(BlockTags.MINEABLE_BY_AXE)
 		.build(new BirchTrapDoor("birchTrapDoor", UtilIdRegistrar.nextIdBlock(), Material.wood));
 
+//	public static final Block barrel = new BlockBuilder(backport.MOD_ID)
+//		.setBlockSound(BlockSounds.WOOD)
+//		.setHardness(2.0f)
+//		.setResistance(2.0f)
+//		.setTopTexture("barrel_top.png")
+//		.setBottomTexture("barrel_bottom.png")
+//		.setSideTextures("barrel_side.png")
+//		.setTags(BlockTags.MINEABLE_BY_AXE)
+//		.build(new Block("barrel", UtilIdRegistrar.nextIdBlock(), Material.wood));
+
 	public static final Block barrel = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.WOOD)
-		.setHardness(2.0f)
-		.setResistance(2.0f)
-		.setTopTexture("barrel_top.png")
-		.setBottomTexture("barrel_bottom.png")
-		.setSideTextures("barrel_side.png")
-		.setTags(BlockTags.MINEABLE_BY_AXE)
-		.build(new BlockBarrel("barrel", UtilIdRegistrar.nextIdBlock(), Material.wood));
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/barrel.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "barrel.json"), new bdmajora.backport.block.metastates.BarrelMetaState(), true))
+		.build(new bdmajora.backport.block.dragonfly.BlockBarrel("barrel", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/barrel.json")));
+
 
 	public static final Block beeNest = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.WOOD)
