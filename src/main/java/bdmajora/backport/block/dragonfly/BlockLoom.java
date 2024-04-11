@@ -5,21 +5,19 @@ import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.util.helper.Direction;
 import net.minecraft.core.util.helper.Side;
+import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
 import useless.dragonfly.model.block.processed.BlockCube;
 import useless.dragonfly.model.block.processed.BlockModel;
-import net.minecraft.core.util.phys.AABB;
 
 import java.util.ArrayList;
 
-public class BlockBarrel extends BlockTransparent {
-
+public class BlockLoom extends BlockTransparent {
 	public useless.dragonfly.model.block.processed.BlockModel model;
 
-	public BlockBarrel(String key, int id, Material material, BlockModel model) {
+	public BlockLoom(String key, int id, Material material, BlockModel model) {
 		super(key, id, material, true);
-		this.model = model; // Initialize the model field
-
+		this.model = model;
 	}
 
 	@Override
@@ -28,16 +26,15 @@ public class BlockBarrel extends BlockTransparent {
 		Direction hRotation = entity.getHorizontalPlacementDirection(side);
 		if (hRotation == Direction.NORTH) {
 			meta |= 1;
-		} else if (hRotation == Direction.EAST) {
+		}
+		if (hRotation == Direction.EAST) {
 			meta |= 2;
-		} else if (hRotation == Direction.SOUTH) {
+		}
+		if (hRotation == Direction.SOUTH) {
 			meta |= 0;
-		} else if (hRotation == Direction.WEST) {
+		}
+		if (hRotation == Direction.WEST) {
 			meta |= 3;
-		} else if (hRotation == Direction.UP) {
-			meta |= 7;
-		} else if (hRotation == Direction.DOWN) {
-			meta |= 7;
 		}
 		world.setBlockMetadataWithNotify(x, y, z, meta);
 	}
@@ -56,7 +53,6 @@ public class BlockBarrel extends BlockTransparent {
 	public int getRenderBlockPass() {
 		return 0;
 	}
-
 	@Override
 	public void getCollidingBoundingBoxes(World world, int x, int y, int z, AABB aabb, ArrayList<AABB> aabbList) {
 		for (BlockCube cube: model.blockCubes) {
@@ -66,4 +62,3 @@ public class BlockBarrel extends BlockTransparent {
 		this.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 	}
 }
-

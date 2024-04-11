@@ -80,9 +80,6 @@ tile.backport.hayBlock.name=Hay Block
 tile.backport.coarseDirt.name=Coarse Dirt
 tile.backport.boneBlock.name=Bone Block
 tile.backport.target.name=Target
-tile.backport.loom.name=Loom
-tile.backport.fletchingTable.name=Fletching Table
-tile.backport.smithingTable.name=Smithing Table
 tile.backport.rootedDirt.name=Rooted Dirt
 tile.backport.muddyMangroveRoot.name=Muddy Mangrove Root
 tile.backport.mud.name=Mud
@@ -418,6 +415,9 @@ tile.backport.yellowShulkerBox.name=Yellow Shulker Box
 tile.backport.enchantmentTable.name=Enchantment Table
 tile.backport.smoker.name=Smoker
 tile.backport.barrel.name=Barrel
+tile.backport.loom.name=Loom
+tile.backport.fletchingTable.name=Fletching Table
+tile.backport.smithingTable.name=Smithing Table
 
 ###Ice
 tile.backport.blueIce.name=Blue Ice

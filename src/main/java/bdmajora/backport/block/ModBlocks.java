@@ -430,43 +430,21 @@ public class ModBlocks {
 		.build(new Block("ancientDebris",UtilIdRegistrar.nextIdBlock(),Material.stone));
 
 	public static final Block loom = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.WOOD)
-		.setHardness(1.0f)
-		.setResistance(1.0f)
-		.setTopTexture("loom_top.png")
-		.setBottomTexture("loom_bottom.png")
-		.setNorthTexture("loom_side.png")
-		.setSouthTexture("loom_front.png")
-		.setWestTexture("loom_side.png")
-		.setEastTexture("loom_side.png")
-		.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-		.build(new Block("loom",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/loom.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "loom.json"), new bdmajora.backport.block.metastates.SmokerMetaState(), true))
+		.build(new bdmajora.backport.block.dragonfly.BlockLoom("loom", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/loom.json")));
+
 
 	public static final Block fletchingTable = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.WOOD)
-		.setHardness(1.0f)
-		.setResistance(1.0f)
-		.setTopTexture("fletching_table_top.png")
-		.setBottomTexture("fletching_table_top.png")
-		.setNorthTexture("fletching_table_side.png")
-		.setSouthTexture("fletching_table_front.png")
-		.setWestTexture("fletching_table_side.png")
-		.setEastTexture("fletching_table_side.png")
-		.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-		.build(new Block("fletchingTable",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/fletching_table.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "fletching_table.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("fletchingTable", UtilIdRegistrar.nextIdBlock(), Material.wood, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/fletching_table.json")));
 
 	public static final Block smithingTable = new BlockBuilder(backport.MOD_ID)
-		.setBlockSound(BlockSounds.WOOD)
-		.setHardness(1.0f)
-		.setResistance(1.0f)
-		.setTopTexture("smithing_table_top.png")
-		.setBottomTexture("smithing_table_bottom.png")
-		.setNorthTexture("smithing_table_side.png")
-		.setSouthTexture("smithing_table_front.png")
-		.setWestTexture("smithing_table_side.png")
-		.setEastTexture("smithing_table_side.png")
-		.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-		.build(new Block("smithingTable",UtilIdRegistrar.nextIdBlock(),Material.wood));
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/smithing_table.json"),
+			ModelHelper.getOrCreateBlockState(backport.MOD_ID, "smithing_table.json"), null, true))
+		.build(new bdmajora.backport.block.dragonfly.BlockModel("smithingTable", UtilIdRegistrar.nextIdBlock(), Material.metal, ModelHelper.getOrCreateBlockModel(backport.MOD_ID, "block/smithing_table.json")));
+
 
 	public static final Block amethystBlock = new BlockBuilder(backport.MOD_ID)
 		.setBlockSound(BlockSounds.METAL)
